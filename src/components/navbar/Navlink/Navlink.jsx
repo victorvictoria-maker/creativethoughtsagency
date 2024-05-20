@@ -3,6 +3,7 @@
 import { useState } from "react";
 import EachNavlink from "../EachNavlink/EachNavlink";
 import styles from "../navbar.module.css";
+import Image from "next/image";
 
 let navitem = [
   {
@@ -47,12 +48,14 @@ const Navlink = () => {
           <EachNavlink eachNavItem={{ title: "Login", path: "/login" }} />
         )}
       </ul>
-      <button
+      <Image
+        src='/images/menu.png'
+        alt='Menu'
+        width={30}
+        height={30}
         className={styles.menuButton}
         onClick={() => setMenuOpen((prev) => !prev)}
-      >
-        Menu
-      </button>
+      />
       {menuOpen && (
         <ul className={styles.mobileLinks}>
           {navitem.map((eachNavItem) => (
