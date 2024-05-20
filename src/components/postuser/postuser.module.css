@@ -1,3 +1,13 @@
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+}
+
 .detailtext {
   display: flex;
   flex-direction: column;
@@ -11,4 +21,7 @@
 
 .detailvalue {
   font-weight: 500;
+}
+
+.text {
 }

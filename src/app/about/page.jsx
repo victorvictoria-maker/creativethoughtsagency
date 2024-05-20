@@ -1,6 +1,11 @@
 import Image from "next/image";
 import style from "./about.module.css";
 
+export const metadata = {
+  title: "About Page ",
+  description: "Creative Thoughts Agency Webpage is here to give you the best",
+};
+
 const AboutPage = () => {
   return (
     <div className={style.wrapper}>

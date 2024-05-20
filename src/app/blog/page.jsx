@@ -1,22 +1,28 @@
 import EachPost from "@/components/eachpost/EachPost";
 import styles from "./blog.module.css";
+import { getAllPosts } from "@/lib/data";
 
-const getData = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    // no catching of the data
-    // cache: "no-store",
-    // refreshes the data every 1 hour
-    // next: { revalidate: 3600 },
-  });
-  if (!res.ok) {
-    throw new Error("Something went wrong");
-  }
+// FETCHING DATA WITH API
+// const getData = async () => {
+// const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+// no catching of the data
+// cache: "no-store",
+// refreshes the data every 1 hour
+// next: { revalidate: 3600 },
+// });
+// if (!res.ok) {
+// throw new Error("Something went wrong");
+// }
 
-  return res.json();
-};
+// return res.json();
+// };
 
 const BlogPage = async () => {
-  const posts = await getData();
+  // FETCHING DATA WITH API
+  // const posts = await getData();
+
+  // FETCHING DATA WITHOUT API
+  const posts = await getAllPosts();
 
   return (
     <div className={styles.wrapper}>

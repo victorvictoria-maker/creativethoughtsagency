@@ -1,6 +1,11 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
 
+export const metadata = {
+  title: "Contact Page",
+  description: "Creative Thoughts Agency Webpage is here to give you the best",
+};
+
 const Contactpage = () => {
   return (
     <div className={styles.wrapper}>
