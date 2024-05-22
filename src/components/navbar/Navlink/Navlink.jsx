@@ -4,6 +4,8 @@ import { useState } from "react";
 import EachNavlink from "../EachNavlink/EachNavlink";
 import styles from "../navbar.module.css";
 import Image from "next/image";
+import { handleGithubLogout } from "@/lib/action";
+import { auth } from "@/lib/auth";
 
 let navitem = [
   {
@@ -24,12 +26,10 @@ let navitem = [
   },
 ];
 
-// temporary data
-let session = true;
-let isAdmin = true;
-
-const Navlink = () => {
+const Navlink = ({ session }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // let isAdmin = true;
 
   return (
     <div className='navlink-container'>
@@ -37,12 +37,14 @@ const Navlink = () => {
         {navitem.map((eachNavItem) => (
           <EachNavlink key={eachNavItem.title} eachNavItem={eachNavItem} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && (
+            {session.user?.isAdmin && (
               <EachNavlink eachNavItem={{ title: "Admin", path: "/admin" }} />
             )}
-            <button className={styles.logoutBtn}>Logout</button>
+            <form action={handleGithubLogout}>
+              <button className={styles.logoutBtn}>Logout</button>
+            </form>
           </>
         ) : (
           <EachNavlink eachNavItem={{ title: "Login", path: "/login" }} />
