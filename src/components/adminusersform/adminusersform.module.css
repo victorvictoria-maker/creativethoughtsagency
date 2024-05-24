@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper input,
+.wrapper textarea,
+.wrapper select {
+  background-color: var(--softbackground);
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--text);
+}
+
+.wrapper button {
+  padding: 20px;
+  cursor: pointer;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 5px;
+  color: var(--text);
+  font-weight: bold;
+}

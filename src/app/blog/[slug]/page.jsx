@@ -39,7 +39,7 @@ const SingleBlogPage = async ({ params }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.image}>
-        <Image src={post?.img} alt='Blog Image' fill />
+        <Image src={post?.img || "/noavatar.png"} alt='Blog Image' fill />
       </div>
       <div className={styles.text}>
         <h1 className={styles.title}>{post?.title}</h1>
