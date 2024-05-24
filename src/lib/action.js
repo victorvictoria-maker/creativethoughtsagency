@@ -8,7 +8,7 @@ import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
 
 export const addPost = async (previousState, formData) => {
-  const { title, desc, userId, slug } = Object.fromEntries(formData);
+  const { title, desc, userId, slug, img } = Object.fromEntries(formData);
   //   console.log(title, desc, userId, slug);
 
   try {
@@ -16,7 +16,7 @@ export const addPost = async (previousState, formData) => {
     const newPost = new Post({
       title,
       desc,
-      // img,
+      img,
       userId,
       slug,
     });
