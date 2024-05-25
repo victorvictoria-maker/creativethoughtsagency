@@ -1,4 +1,4 @@
-import Loginform from "@/components/loginform/loginform";
+import Loginform from "@/components/loginform/Loginform";
 import { handleGithubLogin } from "@/lib/action";
 import styles from "./login.module.css";
 

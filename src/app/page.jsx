@@ -29,6 +29,7 @@ const HomePage = () => {
           alt='Hero Gif'
           fill
           className={styles.heroimage}
+          unoptimized={true}
         />
       </div>
     </div>

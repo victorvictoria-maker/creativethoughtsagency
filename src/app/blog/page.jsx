@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/data";
 
 // FETCHING DATA WITH API
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/blog", {
+  const res = await fetch(`${process.env.PAGE_URL}/api/blog`, {
     // no catching of the data
     // cache: "no-store",
     // refreshes the data every 1 hour

@@ -17,7 +17,7 @@ export const generateMetadata = async ({ params }) => {
 // FETCHING DATA WITH API
 const getData = async (slug) => {
   const res = await fetch(
-    `http://localhost:3000/api/blog/${slug}`
+    `${process.env.PAGE_URL}/api/blog/${slug}`
     //     {}
   );
   if (!res.ok) {
